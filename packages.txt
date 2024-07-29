@@ -21,6 +21,13 @@ connection string: mongodb+srv://cchen:Fs3wQ9CKMb1x933H@cluster0.cfzawgn.mongodb
 autenticacion: te registras y entras a la web
 autorizacion: alguien esta loggueado y puede hacer ciertas acciones
 
+BACK END
+1. voy a la carpeta server
+2. ejecuto lo siguiente
+
+node index.js
+
+
 FRONT END
 1. voy para la carpeta padre 
 2. corro los siguiente comandos
