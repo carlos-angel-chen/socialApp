@@ -1,0 +1,30 @@
+express: para la libreria
+body-parser: procesar el request body 
+bcrypt: password encryption
+cors
+dotenv: variables de entorno
+gridfs-stream: file upload
+multer
+multer-gridfs-storage: para upload files locally
+helmet: request safety
+morgan: para login 
+jsonwebtoken: para autenticar
+mongoose: mongodb access
+
+
+ip address: 201.231.173.147
+username: cchen
+password: Fs3wQ9CKMb1x933H
+connection string: mongodb+srv://cchen:Fs3wQ9CKMb1x933H@cluster0.cfzawgn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+autenticacion: te registras y entras a la web
+autorizacion: alguien esta loggueado y puede hacer ciertas acciones
+
+FRONT END
+1. voy para la carpeta padre 
+2. corro los siguiente comandos
+
+npx create-react-app client
+cd client
+npm i react-redux @reduxjs/toolkit redux-persist react-dropzone dotenv formik yup react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material
