@@ -25,7 +25,7 @@ BACK END
 1. voy a la carpeta server
 2. ejecuto lo siguiente
 
-node index.js
+npm run start
 
 
 FRONT END
