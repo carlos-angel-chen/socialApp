@@ -8,36 +8,36 @@ import User from '../models/User.js';
 // res: me da la respuesta que se va a enviar al frontend
 export const register = async (req, res) => {
     try {
-      const {
-        firstName,
-        lastName,
-        email,
-        password,
-        picturePath,
-        friends,
-        location,
-        occupation,
-      } = req.body;
+        const {
+            firstName,
+            lastName,
+            email,
+            password,
+            picturePath,
+            friends,
+            location,
+            occupation,
+        } = req.body;
   
-      const salt = await bcrypt.genSalt(); // se genera un salt para encriptar la contraseña
-      const passwordHash = await bcrypt.hash(password, salt); // se encripta la contraseña
+        const salt = await bcrypt.genSalt(); // se genera un salt para encriptar la contraseña
+        const passwordHash = await bcrypt.hash(password, salt); // se encripta la contraseña
 
-      const newUser = new User({
-        firstName,
-        lastName,
-        email,
-        password: passwordHash,
-        picturePath,
-        friends,
-        location,
-        occupation,
-        viewedProfile: Math.floor(Math.random() * 10000),
-        impressions: Math.floor(Math.random() * 10000),
-      });
+        const newUser = new User({
+            firstName,
+            lastName,
+            email,
+            password: passwordHash,
+            picturePath,
+            friends,
+            location,
+            occupation,
+            viewedProfile: Math.floor(Math.random() * 10000),
+            impressions: Math.floor(Math.random() * 10000),
+        });
 
-      const savedUser = await newUser.save(); // se guarda el usuario en la db
+        const savedUser = await newUser.save(); // se guarda el usuario en la db
 
-      res.status(201).json(savedUser); // se envia la respuesta al frontend
+        res.status(201).json(savedUser); // se envia la respuesta al frontend
     }
     catch (err) {
         res.status(500).json({ error: err.message });
